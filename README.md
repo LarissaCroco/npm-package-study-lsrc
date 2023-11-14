@@ -27,11 +27,11 @@ The `convertCurrency` function enables currency conversion based on fixed exchan
 - Use `convertCurrency(amount, fromCurrency, toCurrency)` for currency conversion tasks.
 
 ```shell
-npm i npm-package-study
+npm i npm-package-study-lscr
 ```
 
 ```js
-const {normalizeZipCode, convertCurrency} = require("npm-package-study")
+const {normalizeZipCode, convertCurrency} = require("npm-package-study-lscr")
 ```
 
 ## Notes
