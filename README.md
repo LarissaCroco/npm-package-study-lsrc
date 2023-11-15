@@ -12,6 +12,17 @@ The `normalizeZipCode` function standardizes postal codes (ZIP codes) by removin
 - Validates the format: either a 5-digit or 8-digit ZIP code.
 - Returns the normalized ZIP code in the format 'xxxxx' or 'xxxxx-xxx'.
 
+### Usage normalizeZipCode Function
+- Use `normalizeZipCode(zipcode)` to clean and format ZIP codes.
+
+```shell
+npm i npm-package-study-lscr
+```
+
+```js
+const {normalizeZipCode} = require("npm-package-study-lscr")
+```
+
 ## convertCurrency Function
 
 ### Purpose
@@ -22,8 +33,7 @@ The `convertCurrency` function enables currency conversion based on fixed exchan
 - Performs currency conversion using predefined exchange rates.
 - Can be modified to fetch real-time exchange rates from an external API.
 
-### Usage
-- Use `normalizeZipCode(zipcode)` to clean and format ZIP codes.
+### Usage convertCurrency Function
 - Use `convertCurrency(amount, fromCurrency, toCurrency)` for currency conversion tasks.
 
 ```shell
@@ -31,7 +41,7 @@ npm i npm-package-study-lscr
 ```
 
 ```js
-const {normalizeZipCode, convertCurrency} = require("npm-package-study-lscr")
+const {convertCurrency} = require("npm-package-study-lscr")
 ```
 
 ## Notes
