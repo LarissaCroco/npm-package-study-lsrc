@@ -1,26 +1,32 @@
-// Função para normalizar um código postal (CEP)
+/**
+ * Function to normalize a ZIP code
+ * @param {string} zipcode - The ZIP code to be normalized
+ * @returns {string} - The normalized ZIP code
+ */
 function normalizeZipCode(zipcode) {
-    // Remove todos os caracteres não numéricos do zipcode
     const normalized = zipcode.replace(/\D/g, '');
 
-    // Verifica se o CEP normalizado corresponde ao formato (5 dígitos ou 9 dígitos)
     if (/^\d{5}$/.test(normalized) || /^\d{8}$/.test(normalized)) {
-        // Formata o CEP: 'xxxxx' ou 'xxxxx-xxx'
+        // zipcode: 'xxxxx' or 'xxxxx-xxx'
         return normalized.length === 5 ? normalized : `${normalized.slice(0, 5)}-${normalized.slice(5)}`;
-    } else {
-        return 'Formato inválido de CEP';
     }
+    return 'Formato inválido de CEP';
+
 }
 
 
-// Função para converter moedas
-// Os valores das taxas de câmbio que usei no exemplo são fictícios 
-// e foram inventados para ilustrar como uma função de conversão de moeda poderia funcionar. 
-// Em situações reais, você precisaria acessar uma API de serviço financeiro ou uma fonte 
-// confiável que forneça taxas de câmbio em tempo real.
-// Adicione mais taxas de câmbio conforme necessário
+/**
+ * Function to convert currencies
+ * The exchange rates used in the example are fictional.
+ * In real scenarios, access a financial service API or a reliable source 
+ * for real-time exchange rates.
+ * Add more exchange rates as needed.
+ * @param {number} amount - The amount to be converted
+ * @param {string} fromCurrency - The currency to convert from
+ * @param {string} toCurrency - The currency to convert to
+ * @returns {string|number} - The converted amount or an error message
+ */
 function convertCurrency(amount, fromCurrency, toCurrency) {
-    // Aqui você pode substituir a lógica com uma API real de conversão de moedas
     const exchangeRates = {
         USD: {
             EUR: 0.85,
@@ -48,16 +54,14 @@ function convertCurrency(amount, fromCurrency, toCurrency) {
         },
     };
 
-    // Verifica se as moedas estão presentes nas taxas de câmbio
     if (!exchangeRates[fromCurrency] || !exchangeRates[fromCurrency][toCurrency]) {
         return "Conversão não suportada";
     }
 
-    // Faz a conversão
     const result = amount * exchangeRates[fromCurrency][toCurrency];
-    return result.toFixed(2); // Retorna o resultado com duas casas decimais
+    return result.toFixed(2); 
 }
 
 
-// Exportando as funções para uso em outros arquivos 
+// Exporting the functions for use in other Node.js files
 module.exports = { normalizeZipCode, convertCurrency };
