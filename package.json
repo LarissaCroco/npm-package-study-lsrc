@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LarissaCroco/npm-package-study.git"
+    "url": "git+https://github.com/LarissaCroco/npm-package-study-lsrc.git"
   },
   "keywords": ["convert", "currency", "zipcode"],
   "author": "larissaSales",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LarissaCroco/npm-package-study/issues"
+    "url": "https://github.com/LarissaCroco/npm-package-study-lsrc/issues"
   },
-  "homepage": "https://github.com/LarissaCroco/npm-package-study#readme"
+  "homepage": "https://github.com/LarissaCroco/npm-package-study-lsrc#readme"
 }
